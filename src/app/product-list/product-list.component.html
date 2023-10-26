@@ -1,0 +1,38 @@
+
+
+<div>
+  <app-category-selector [categories]="categories" (categorySelected)="onCategorySelected($event)"></app-category-selector>
+</div>
+
+<div class="product-list">
+
+ 
+<div *ngFor="let category of products | keyvalue" class="card my-2 p-2"  [attr.id]="category.key">
+  <h2>{{ category.key }}</h2>
+  <hr>
+
+  <div>
+    <div *ngFor="let category of category.value" class="card my-2 p-2">
+
+      <div class="d-flex justify-between align-items-center ">
+        <div class="d-flex align-items-center">
+  
+          <img [src]=category.images[0] alt="" height="100" width="100" class="rounded-circle">
+        </div>
+  
+        <div class="px-1" >
+  
+          <h2 >{{ category?.title }}</h2>
+          <p  class="trancate">{{ category?.description }}</p>
+  
+          <div class="justify-between">
+            <p >${{ category?.price }}</p>
+            <p >{{ category?.category.name }}</p>
+  
+          </div>
+          
+        </div>
+      
+      </div>
+    </div>
+</div>

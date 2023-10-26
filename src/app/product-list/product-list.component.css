@@ -1,0 +1,30 @@
+.product-list {
+    margin-top: 20px;
+    width: 500px;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+
+  .justify-between{
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .trancate{
+
+    max-width: 280px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+
+  }
